@@ -2,17 +2,7 @@
 title: Wine
 nav_order: 17
 permalink: /wine/
----
-
-# Wine
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 **Wine** permet d'exécuter des logiciels Windows sous Linux (LTspice…).
@@ -36,9 +26,11 @@ et complétez chaque ligne `Components:` :
 Components: main contrib non-free non-free-firmware
 ```
 
-{: .note }
-Avec l'ancien format `/etc/apt/sources.list`, ajoutez `contrib` à la fin de chaque ligne `deb`, par exemple :
-`deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware`
+> ##### Remarque
+>
+> Avec l'ancien format `/etc/apt/sources.list`, ajoutez `contrib` à la fin de chaque ligne `deb`, par exemple :
+> `deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware`
+{: .block-tip }
 
 ## 2. Installer Wine 64 et 32 bits
 
@@ -59,9 +51,11 @@ dans Wine.
 sudo apt install winetricks ttf-mscorefonts-installer
 ```
 
-{: .note }
-L'installation de `ttf-mscorefonts-installer` demande d'accepter la licence de Microsoft :
-utilisez la touche <kbd>Tab</kbd> pour sélectionner **Ok**, puis **Oui**.
+> ##### Remarque
+>
+> L'installation de `ttf-mscorefonts-installer` demande d'accepter la licence de Microsoft :
+> utilisez la touche <kbd>Tab</kbd> pour sélectionner **Ok**, puis **Oui**.
+{: .block-tip }
 
 Vérifiez l'installation :
 

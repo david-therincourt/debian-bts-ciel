@@ -1,4 +1,6 @@
 title: Debian 13 – BTS CIEL
+longtitle: Debian 13 – BTS CIEL
+author: David THERINCOURT
 description: >-
   Procédures de post-installation de Debian 13 « Trixie »
   pour les postes du BTS CIEL (options Électronique et Physique).
@@ -7,82 +9,42 @@ lang: fr-FR
 url: "https://david-therincourt.github.io"
 baseurl: "/debian-bts-ciel"
 
-theme: just-the-docs
+remote_theme: sighingnow/jekyll-gitbook
 
 plugins:
-  - jekyll-seo-tag
+  - jekyll-remote-theme
 
-# Couleurs et apparence
-color_scheme: light
-logo: false
+# Sommaire de la page dans la barre latérale
+toc:
+  enabled: true
+  h_min: 2
+  h_max: 3
 
-# Recherche
-search_enabled: true
-search:
-  heading_level: 2
-  previews: 3
-  preview_words_before: 5
-  preview_words_after: 10
-  tokenizer_separator: /[\s/]+/
-  rel_url: true
-  button: false
-
-# Navigation
-nav_enabled: true
-heading_anchors: true
-back_to_top: true
-back_to_top_text: "Haut de page"
-
-aux_links:
-  "Dépôt GitHub":
-    - "https://github.com/david-therincourt/debian-bts-ciel"
-aux_links_new_tab: true
-
-# Pied de page
-footer_content: "BTS CIEL – Procédures de post-installation Debian 13."
-last_edit_timestamp: true
-last_edit_time_format: "%d/%m/%Y"
-gh_edit_link: true
-gh_edit_link_text: "Modifier cette page sur GitHub"
-gh_edit_repository: "https://github.com/david-therincourt/debian-bts-ciel"
-gh_edit_branch: "main"
-gh_edit_view_mode: "edit"
-
-# Encadrés (callouts) : {: .note }, {: .warning }, etc.
-callouts_level: quiet
-callouts:
-  note:
-    title: Remarque
-    color: blue
-  tip:
-    title: Astuce
-    color: green
-  warning:
-    title: Attention
-    color: yellow
-  important:
-    title: Important
-    color: red
-
-# Bouton « copier » sur les blocs de code
-enable_copy_code_button: true
-
+markdown: kramdown
 kramdown:
+  auto_ids: true
+  input: GFM
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
+    guess_lang: true
     block:
       line_numbers: false
 
-# Layout du thème appliqué par défaut à toutes les pages
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: default
+syntax_highlighter_style: github
+
+# Pages du site : dossier _docs, classées par nav_order dans la barre latérale
+collections:
+  docs:
+    output: true
+    sort_by: nav_order
+
+ordered_collections:
+  - docs
+
+page_width: 800px
 
 exclude:
   - README.md
-  - installations-debian13.md
   - Gemfile
   - Gemfile.lock
   - vendor

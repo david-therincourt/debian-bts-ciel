@@ -2,17 +2,7 @@
 title: Simulation
 nav_order: 15
 permalink: /simulation/
----
-
-# Simulation
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## LTspice (avec Wine)
@@ -20,9 +10,11 @@ permalink: /simulation/
 **LTspice** est un simulateur de circuits électroniques (SPICE) gratuit, édité par Analog Devices.
 Il n'existe que pour Windows et macOS : sous Linux, on l'utilise avec Wine.
 
-{: .important }
-Wine doit être installé au préalable, avec les polices Microsoft
-(voir la page [Wine]({{ '/wine/' | relative_url }})).
+> ##### Important
+>
+> Wine doit être installé au préalable, avec les polices Microsoft
+> (voir la page [Wine]({{ '/wine/' | relative_url }})).
+{: .block-danger }
 
 ### 1. Télécharger l'installateur
 
@@ -57,6 +49,8 @@ LTspice apparaît dans le menu des applications. On peut aussi le lancer depuis 
 wine ~/.wine/drive_c/users/$USER/AppData/Local/Programs/ADI/LTspice/LTspice.exe
 ```
 
-{: .tip }
-Les fichiers de circuits (`.asc`) peuvent être enregistrés dans le dossier personnel Linux :
-il est accessible depuis LTspice par le lecteur `Z:` (`Z:\home\<utilisateur>\…`).
+> ##### Astuce
+>
+> Les fichiers de circuits (`.asc`) peuvent être enregistrés dans le dossier personnel Linux :
+> il est accessible depuis LTspice par le lecteur `Z:` (`Z:\home\<utilisateur>\…`).
+{: .block-tip }

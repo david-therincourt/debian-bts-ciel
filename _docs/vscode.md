@@ -2,17 +2,7 @@
 title: VS Code
 nav_order: 9
 permalink: /vscode/
----
-
-# VS Code
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Installation depuis le dépôt APT de Microsoft
@@ -54,9 +44,11 @@ sudo apt update
 sudo apt install code
 ```
 
-{: .tip }
-Les mises à jour de VS Code arrivent ensuite avec celles du système
-(`sudo apt update && sudo apt upgrade` ou la *Logithèque*).
+> ##### Astuce
+>
+> Les mises à jour de VS Code arrivent ensuite avec celles du système
+> (`sudo apt update && sudo apt upgrade` ou la *Logithèque*).
+{: .block-tip }
 
 ## Accès aux ports série (ESP32, Arduino…)
 
@@ -66,6 +58,8 @@ Pour téléverser un programme sur une carte, l'utilisateur doit appartenir au g
 sudo usermod -aG dialout $USER
 ```
 
-{: .important }
-Fermez puis rouvrez la session pour que l'ajout au groupe soit pris en compte.
-Vérifiez ensuite avec la commande `groups`.
+> ##### Important
+>
+> Fermez puis rouvrez la session pour que l'ajout au groupe soit pris en compte.
+> Vérifiez ensuite avec la commande `groups`.
+{: .block-danger }

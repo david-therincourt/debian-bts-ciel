@@ -2,17 +2,7 @@
 title: Web
 nav_order: 4
 permalink: /web/
----
-
-# Web
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Chromium
@@ -23,9 +13,11 @@ Installez Chromium et sa traduction française :
 sudo apt install chromium chromium-l10n
 ```
 
-{: .note }
-Préférez le paquet Debian au Flatpak : il donne accès aux API **Web Serial** et **WebUSB**,
-utiles pour programmer des cartes (ESP32, Arduino, micro:bit…) depuis le navigateur.
+> ##### Remarque
+>
+> Préférez le paquet Debian au Flatpak : il donne accès aux API **Web Serial** et **WebUSB**,
+> utiles pour programmer des cartes (ESP32, Arduino, micro:bit…) depuis le navigateur.
+{: .block-tip }
 
 ### Affichage natif sous Wayland
 

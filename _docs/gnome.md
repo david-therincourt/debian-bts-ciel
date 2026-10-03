@@ -2,17 +2,7 @@
 title: Gnome
 nav_order: 3
 permalink: /gnome/
----
-
-# Gnome
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Ajustements et extensions
@@ -38,12 +28,16 @@ sudo apt install gnome-shell-extension-dashtodock
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
 ```
 
-{: .important }
-Sous Wayland, fermez puis rouvrez la session pour que l'extension soit prise en compte.
+> ##### Important
+>
+> Sous Wayland, fermez puis rouvrez la session pour que l'extension soit prise en compte.
+{: .block-danger }
 
-{: .note }
-Si la version packagée n'est pas compatible avec GNOME 48, installez Dash to Dock
-depuis le **Gestionnaire d'extensions**. Autre possibilité : l'extension **Dash to Panel**.
+> ##### Remarque
+>
+> Si la version packagée n'est pas compatible avec GNOME 48, installez Dash to Dock
+> depuis le **Gestionnaire d'extensions**. Autre possibilité : l'extension **Dash to Panel**.
+{: .block-tip }
 
 ## Extension Apps Menu
 
@@ -55,9 +49,11 @@ il suffit de l'activer.
 gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
 ```
 
-{: .tip }
-Vous pouvez aussi activer ou désactiver les extensions depuis l'application **Extensions**
-ou le **Gestionnaire d'extensions**.
+> ##### Astuce
+>
+> Vous pouvez aussi activer ou désactiver les extensions depuis l'application **Extensions**
+> ou le **Gestionnaire d'extensions**.
+{: .block-tip }
 
 ## Éditeur de menu : Libre Menu Editor
 

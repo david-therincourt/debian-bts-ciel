@@ -2,17 +2,7 @@
 title: PCB
 nav_order: 16
 permalink: /pcb/
----
-
-# PCB
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## KiCad
@@ -28,9 +18,11 @@ Deux méthodes permettent d'avoir une version plus récente :
 | Rétroportages Debian  | 9.0.x (corrections)    | avec le système (`apt`)       |
 | Flatpak (Flathub)     | 10.0.x                 | avec `flatpak update`         |
 
-{: .warning }
-Un projet enregistré avec KiCad 10 ne peut plus être ouvert avec KiCad 9.
-Utilisez la même version sur tous les postes de la salle et à la maison.
+> ##### Attention
+>
+> Un projet enregistré avec KiCad 10 ne peut plus être ouvert avec KiCad 9.
+> Utilisez la même version sur tous les postes de la salle et à la maison.
+{: .block-warning }
 
 ### Option 1 : rétroportages Debian (*backports*)
 
@@ -56,16 +48,20 @@ Installez KiCad, ses bibliothèques et sa documentation en français depuis les 
 sudo apt install -t trixie-backports kicad kicad-libraries kicad-doc-fr
 ```
 
-{: .note }
-L'option `-t trixie-backports` est nécessaire : sans elle, `apt` installe la version
-des dépôts principaux. Les mises à jour suivantes des rétroportages sont ensuite
-appliquées normalement par `sudo apt upgrade`.
+> ##### Remarque
+>
+> L'option `-t trixie-backports` est nécessaire : sans elle, `apt` installe la version
+> des dépôts principaux. Les mises à jour suivantes des rétroportages sont ensuite
+> appliquées normalement par `sudo apt upgrade`.
+{: .block-tip }
 
-{: .tip }
-Le paquet `kicad-packages3d` (modèles 3D des composants, installé avec `kicad-libraries`)
-pèse plusieurs gigaoctets. Pour l'éviter, installez seulement
-`kicad kicad-symbols kicad-footprints kicad-doc-fr` : la visualisation 3D affichera
-alors les cartes sans les composants.
+> ##### Astuce
+>
+> Le paquet `kicad-packages3d` (modèles 3D des composants, installé avec `kicad-libraries`)
+> pèse plusieurs gigaoctets. Pour l'éviter, installez seulement
+> `kicad kicad-symbols kicad-footprints kicad-doc-fr` : la visualisation 3D affichera
+> alors les cartes sans les composants.
+{: .block-tip }
 
 ### Option 2 : Flatpak
 
@@ -89,9 +85,11 @@ flatpak install flathub org.kicad.KiCad.Library.Packages3D
 à partir des fichiers Gerber et de perçage exportés par KiCad, il calcule les trajets
 d'isolation, de perçage et de découpe, puis génère le G-code.
 
-{: .important }
-Prérequis : la bibliothèque FUSE 2 doit être installée
-(voir [AppImage]({{ '/systeme/#appimage-libfuse' | relative_url }})).
+> ##### Important
+>
+> Prérequis : la bibliothèque FUSE 2 doit être installée
+> (voir [AppImage]({{ '/systeme/#appimage-libfuse' | relative_url }})).
+{: .block-danger }
 
 ### 1. Télécharger et ranger l'AppImage
 
@@ -122,10 +120,12 @@ de lire les valeurs comme `0.5`.
 LC_NUMERIC=C ~/Applications/flatcam-2024.4-x86_64.AppImage
 ```
 
-{: .note }
-`LC_NUMERIC=C` ne modifie que l'écriture des nombres : l'interface reste en français.
-Ce réglage garantit aussi un G-code avec des points décimaux ; un G-code avec des virgules
-serait refusé par les commandes de fraiseuse (GRBL, Wegstr…).
+> ##### Remarque
+>
+> `LC_NUMERIC=C` ne modifie que l'écriture des nombres : l'interface reste en français.
+> Ce réglage garantit aussi un G-code avec des points décimaux ; un G-code avec des virgules
+> serait refusé par les commandes de fraiseuse (GRBL, Wegstr…).
+{: .block-tip }
 
 ### 3. Créer le lanceur (fichier `.desktop`)
 
@@ -145,10 +145,12 @@ Categories=Development;Engineering;Electronics;
 EOF
 ```
 
-{: .tip }
-Pour lancer FlatCAM depuis un terminal avec le correctif, ajoutez un alias à la fin de `~/.bashrc` :
-`alias flatcam='LC_NUMERIC=C ~/Applications/flatcam-2024.4-x86_64.AppImage'`,
-puis rechargez le fichier avec `source ~/.bashrc`.
+> ##### Astuce
+>
+> Pour lancer FlatCAM depuis un terminal avec le correctif, ajoutez un alias à la fin de `~/.bashrc` :
+> `alias flatcam='LC_NUMERIC=C ~/Applications/flatcam-2024.4-x86_64.AppImage'`,
+> puis rechargez le fichier avec `source ~/.bashrc`.
+{: .block-tip }
 
 ### 4. Préférences au premier lancement
 

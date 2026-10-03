@@ -2,17 +2,7 @@
 title: Multimédia
 nav_order: 5
 permalink: /multimedia/
----
-
-# Multimédia
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Codecs audio et vidéo
@@ -44,6 +34,8 @@ ainsi que les flux réseau. Il intègre ses propres codecs.
 sudo apt install vlc vlc-l10n
 ```
 
-{: .tip }
-Pour faire de VLC le lecteur par défaut : **Paramètres → Applications → Applications par défaut**,
-puis choisir VLC pour la musique et la vidéo.
+> ##### Astuce
+>
+> Pour faire de VLC le lecteur par défaut : **Paramètres → Applications → Applications par défaut**,
+> puis choisir VLC pour la musique et la vidéo.
+{: .block-tip }

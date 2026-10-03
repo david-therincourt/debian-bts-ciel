@@ -2,17 +2,7 @@
 title: Microcontrôleurs
 nav_order: 11
 permalink: /microcontroleurs/
----
-
-# Microcontrôleurs
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Arduino IDE 2
@@ -20,9 +10,11 @@ permalink: /microcontroleurs/
 Arduino IDE 2 est distribué pour Linux au format **AppImage**. On le range dans un dossier
 `~/Applications`, puis on crée un lanceur pour qu'il apparaisse dans le menu des applications.
 
-{: .important }
-Prérequis : la bibliothèque FUSE 2 doit être installée
-(voir [AppImage]({{ '/systeme/#appimage-libfuse' | relative_url }})).
+> ##### Important
+>
+> Prérequis : la bibliothèque FUSE 2 doit être installée
+> (voir [AppImage]({{ '/systeme/#appimage-libfuse' | relative_url }})).
+{: .block-danger }
 
 ### 1. Télécharger l'AppImage
 
@@ -74,9 +66,11 @@ EOF
 
 Arduino IDE 2 apparaît alors dans le menu des applications. Sinon, fermez puis rouvrez la session.
 
-{: .note }
-Contrairement à Ubuntu, Debian ne bloque pas le bac à sable des applications Electron :
-aucun profil AppArmor n'est nécessaire pour lancer Arduino IDE 2.
+> ##### Remarque
+>
+> Contrairement à Ubuntu, Debian ne bloque pas le bac à sable des applications Electron :
+> aucun profil AppArmor n'est nécessaire pour lancer Arduino IDE 2.
+{: .block-tip }
 
 ### 5. Accès aux cartes
 
@@ -97,8 +91,10 @@ Il suffit que l'utilisateur appartienne au groupe `dialout`
 (voir [Accès aux ports série]({{ '/vscode/#accès-aux-ports-série-esp32-arduino' | relative_url }})) :
 aucune règle `udev` supplémentaire n'est nécessaire.
 
-{: .tip }
-Pour vérifier que la carte est détectée, branchez-la puis lancez `ls /dev/ttyUSB* /dev/ttyACM*`.
+> ##### Astuce
+>
+> Pour vérifier que la carte est détectée, branchez-la puis lancez `ls /dev/ttyUSB* /dev/ttyACM*`.
+{: .block-tip }
 
 ### esptool
 
@@ -117,11 +113,13 @@ esptool --port /dev/ttyUSB0 erase_flash             # effacer la mémoire flash
 esptool --port /dev/ttyUSB0 write_flash 0x0 firmware.bin
 ```
 
-{: .note }
-La version des dépôts Debian (4.7) suffit pour la plupart des cartes. Pour une version plus récente,
-installez esptool avec `pip install esptool` dans un environnement virtuel
-(voir [pip et environnements virtuels]({{ '/python/#pip-et-environnements-virtuels' | relative_url }})) :
-n'utilisez pas l'option `--break-system-packages`.
+> ##### Remarque
+>
+> La version des dépôts Debian (4.7) suffit pour la plupart des cartes. Pour une version plus récente,
+> installez esptool avec `pip install esptool` dans un environnement virtuel
+> (voir [pip et environnements virtuels]({{ '/python/#pip-et-environnements-virtuels' | relative_url }})) :
+> n'utilisez pas l'option `--break-system-packages`.
+{: .block-tip }
 
 ### Avec Arduino IDE 2
 
@@ -157,10 +155,12 @@ st-info --probe
 st-flash write programme.bin 0x8000000
 ```
 
-{: .tip }
-Les cartes Nucleo apparaissent aussi comme une clé USB (`NOD_xxx`) : il suffit d'y copier
-le fichier `.bin` pour programmer la carte. Leur port série virtuel (`/dev/ttyACM0`)
-nécessite l'appartenance au groupe `dialout`.
+> ##### Astuce
+>
+> Les cartes Nucleo apparaissent aussi comme une clé USB (`NOD_xxx`) : il suffit d'y copier
+> le fichier `.bin` pour programmer la carte. Leur port série virtuel (`/dev/ttyACM0`)
+> nécessite l'appartenance au groupe `dialout`.
+{: .block-tip }
 
 ### OpenOCD (débogage)
 

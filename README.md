@@ -1,6 +1,6 @@
 # debian-bts-ciel
 
-Site Jekyll (thème [Just the Docs](https://just-the-docs.com/)) rassemblant les
+Site Jekyll (thème [jekyll-gitbook](https://github.com/sighingnow/jekyll-gitbook)) rassemblant les
 procédures de post-installation de Debian 13 pour le BTS CIEL
 (options Électronique et Physique).
 

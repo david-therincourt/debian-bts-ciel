@@ -2,17 +2,7 @@
 title: Système
 nav_order: 2
 permalink: /systeme/
----
-
-# Système
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## AppImage (libfuse)
@@ -30,10 +20,12 @@ chmod +x Application.AppImage
 ./Application.AppImage
 ```
 
-{: .tip }
-Pour ajouter les AppImage au menu des applications, utilisez **Gear Lever**.
-Il s'installe depuis Flathub (voir [Flatpak et Flathub](#flatpak-et-flathub)) :
-`flatpak install flathub it.mijorus.gearlever`
+> ##### Astuce
+>
+> Pour ajouter les AppImage au menu des applications, utilisez **Gear Lever**.
+> Il s'installe depuis Flathub (voir [Flatpak et Flathub](#flatpak-et-flathub)) :
+> `flatpak install flathub it.mijorus.gearlever`
+{: .block-tip }
 
 ## Flatpak et Flathub
 
@@ -44,8 +36,10 @@ sudo apt install flatpak gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
-{: .important }
-Redémarrez l'ordinateur pour que les applications Flatpak s'affichent dans le menu.
+> ##### Important
+>
+> Redémarrez l'ordinateur pour que les applications Flatpak s'affichent dans le menu.
+{: .block-danger }
 
 ```bash
 sudo reboot
@@ -93,6 +87,8 @@ lpstat -v
 sudo lpadmin -x NOM_IMPRIMANTE
 ```
 
-{: .warning }
-Une mise à jour du paquet `cups-browsed` peut proposer de remplacer ce fichier de configuration.
-Dans ce cas, répondez **N** pour garder votre version.
+> ##### Attention
+>
+> Une mise à jour du paquet `cups-browsed` peut proposer de remplacer ce fichier de configuration.
+> Dans ce cas, répondez **N** pour garder votre version.
+{: .block-warning }

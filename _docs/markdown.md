@@ -2,17 +2,7 @@
 title: Markdown
 nav_order: 7
 permalink: /markdown/
----
-
-# Markdown
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## MarkText
@@ -40,10 +30,14 @@ cd ~/Téléchargements
 sudo apt install ./marktext-linux-*.deb
 ```
 
-{: .note }
-Le `./` devant le nom du fichier est indispensable : il indique à `apt` d'installer
-un fichier local plutôt qu'un paquet des dépôts.
+> ##### Remarque
+>
+> Le `./` devant le nom du fichier est indispensable : il indique à `apt` d'installer
+> un fichier local plutôt qu'un paquet des dépôts.
+{: .block-tip }
 
-{: .warning }
-Un paquet `.deb` installé à la main n'est pas mis à jour automatiquement.
-Pour passer à une nouvelle version, téléchargez le nouveau fichier et relancez la même commande.
+> ##### Attention
+>
+> Un paquet `.deb` installé à la main n'est pas mis à jour automatiquement.
+> Pour passer à une nouvelle version, téléchargez le nouveau fichier et relancez la même commande.
+{: .block-warning }

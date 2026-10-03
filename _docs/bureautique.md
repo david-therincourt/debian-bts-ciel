@@ -2,17 +2,7 @@
 title: Bureautique
 nav_order: 6
 permalink: /bureautique/
----
-
-# Bureautique
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## LibreOffice en français
@@ -67,10 +57,12 @@ et permet de les annoter : flèches, cadres, texte, numéros, flou…
 sudo apt install ksnip
 ```
 
-{: .note }
-Sous Wayland, Ksnip passe par le portail de capture de GNOME : une fenêtre de
-confirmation s'affiche à chaque capture. La capture d'une seule fenêtre peut
-ne pas être disponible.
+> ##### Remarque
+>
+> Sous Wayland, Ksnip passe par le portail de capture de GNOME : une fenêtre de
+> confirmation s'affiche à chaque capture. La capture d'une seule fenêtre peut
+> ne pas être disponible.
+{: .block-tip }
 
 ## Retouche de captures : Gradia
 

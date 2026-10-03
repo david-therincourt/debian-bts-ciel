@@ -2,17 +2,7 @@
 title: LaTeX
 nav_order: 8
 permalink: /latex/
----
-
-# LaTeX
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Installation minimale pour Pandoc
@@ -58,7 +48,9 @@ pandoc document.md -o document.pdf --pdf-engine=xelatex \
        -V lang=fr -V mainfont="DejaVu Serif"
 ```
 
-{: .tip }
-Si une conversion échoue avec un message `File 'xxx.sty' not found`, cherchez le paquet
-qui contient ce fichier avec `apt-file search xxx.sty` (après `sudo apt install apt-file`
-et `sudo apt-file update`).
+> ##### Astuce
+>
+> Si une conversion échoue avec un message `File 'xxx.sty' not found`, cherchez le paquet
+> qui contient ce fichier avec `apt-file search xxx.sty` (après `sudo apt install apt-file`
+> et `sudo apt-file update`).
+{: .block-tip }

@@ -1,15 +1,11 @@
 ---
-title: Accueil
+title: Installation de Debian 13 Trixie pour le BTS CIEL
+permalink: /
 layout: home
-nav_order: 1
 ---
-
-# Installation de Debian 13 Trixie pour le BTS CIEL
-{: .fs-9 }
 
 Procédures de post-installation de Debian 13 « Trixie » pour les postes
 de la section BTS CIEL (enseignement de STI et de physique)
-{: .fs-6 .fw-300 }
 
 ## Sommaire
 

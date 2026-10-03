@@ -2,17 +2,7 @@
 title: Radio logicielle (SDR)
 nav_order: 14
 permalink: /sdr/
----
-
-# Radio logicielle (SDR)
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## GNU Radio
@@ -43,9 +33,11 @@ sudo apt install gqrx-sdr
 sudo apt install uhd-host
 ```
 
-{: .note }
-Sur Debian 13, le paquet `uhd-host` installe lui-même les règles d'accès aux cartes USRP
-(`/usr/lib/udev/rules.d/60-uhd-host.rules`) : il n'y a rien à copier à la main.
+> ##### Remarque
+>
+> Sur Debian 13, le paquet `uhd-host` installe lui-même les règles d'accès aux cartes USRP
+> (`/usr/lib/udev/rules.d/60-uhd-host.rules`) : il n'y a rien à copier à la main.
+{: .block-tip }
 
 ### Téléchargement des images FPGA
 
@@ -113,6 +105,8 @@ source ~/venv/bin/activate
 pip install pyadi-iio
 ```
 
-{: .tip }
-L'option `--system-site-packages` permet à l'environnement d'utiliser la bibliothèque
-`libiio` installée avec `apt`.
+> ##### Astuce
+>
+> L'option `--system-site-packages` permet à l'environnement d'utiliser la bibliothèque
+> `libiio` installée avec `apt`.
+{: .block-tip }

@@ -2,17 +2,7 @@
 title: Oscilloscope
 nav_order: 12
 permalink: /oscilloscope/
----
-
-# Oscilloscope
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Siglent : enregistrer les fichiers sur l'ordinateur par le réseau
@@ -90,14 +80,18 @@ Dans le menu **Utility → Net Storage** de l'oscilloscope :
 Les fichiers enregistrés sur le lecteur `I:` de l'oscilloscope apparaissent
 directement dans le dossier `~/SDS2104X` de l'ordinateur.
 
-{: .note }
-Si l'ordinateur a plusieurs cartes réseau, vous pouvez limiter Samba à l'une d'elles en
-ajoutant dans la section `[global]` de `smb.conf` :
-`interfaces = enp4s0` et `bind interfaces only = yes` (remplacez `enp4s0` par le nom
-de l'interface, donné par la commande `ip link`).
+> ##### Remarque
+>
+> Si l'ordinateur a plusieurs cartes réseau, vous pouvez limiter Samba à l'une d'elles en
+> ajoutant dans la section `[global]` de `smb.conf` :
+> `interfaces = enp4s0` et `bind interfaces only = yes` (remplacez `enp4s0` par le nom
+> de l'interface, donné par la commande `ip link`).
+{: .block-tip }
 
-{: .warning }
-Si l'oscilloscope n'arrive pas à se connecter, il ne gère peut-être que l'ancien protocole SMB1,
-désactivé par défaut. Ajoutez alors `server min protocol = NT1` dans la section `[global]`
-de `smb.conf`, puis redémarrez Samba. Ce protocole est ancien et peu sûr : à réserver
-à un réseau de salle de TP.
+> ##### Attention
+>
+> Si l'oscilloscope n'arrive pas à se connecter, il ne gère peut-être que l'ancien protocole SMB1,
+> désactivé par défaut. Ajoutez alors `server min protocol = NT1` dans la section `[global]`
+> de `smb.conf`, puis redémarrez Samba. Ce protocole est ancien et peu sûr : à réserver
+> à un réseau de salle de TP.
+{: .block-warning }

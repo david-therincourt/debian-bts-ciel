@@ -2,17 +2,7 @@
 title: Interfaces
 nav_order: 13
 permalink: /interfaces/
----
-
-# Interfaces
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 ## Analog Devices ADALM2000 (M2K)
@@ -26,9 +16,11 @@ et la bibliothèque Python :
 sudo apt install libiio-utils m2kcli python3-libm2k
 ```
 
-{: .note }
-Les règles d'accès USB à la carte sont installées automatiquement avec la bibliothèque :
-il n'y a rien à configurer.
+> ##### Remarque
+>
+> Les règles d'accès USB à la carte sont installées automatiquement avec la bibliothèque :
+> il n'y a rien à configurer.
+{: .block-tip }
 
 Branchée en USB, la carte apparaît comme une interface réseau à l'adresse `192.168.2.1` :
 
@@ -51,10 +43,12 @@ chmod +x Scopy-*-Linux-x86_64.AppImage
 ./Scopy-*-Linux-x86_64.AppImage
 ```
 
-{: .note }
-La même page propose aussi Scopy au format Flatpak (`Scopy-v<version>-Linux-x86_64.flatpak`),
-à installer avec `flatpak install --user Scopy-*.flatpak`. Cette installation est plus lourde,
-car elle télécharge en plus un environnement d'exécution complet.
+> ##### Remarque
+>
+> La même page propose aussi Scopy au format Flatpak (`Scopy-v<version>-Linux-x86_64.flatpak`),
+> à installer avec `flatpak install --user Scopy-*.flatpak`. Cette installation est plus lourde,
+> car elle télécharge en plus un environnement d'exécution complet.
+{: .block-tip }
 
 ### Python
 
@@ -90,9 +84,11 @@ sudo apt install ./digilent.adept.runtime_*.deb ./digilent.adept.utilities_*.deb
                  ./digilent.waveforms_*.deb
 ```
 
-{: .tip }
-Avec `dpkg -i`, les dépendances ne sont pas installées et il faut ensuite lancer
-`sudo apt --fix-broken install`. `apt install ./fichier.deb` fait tout en une seule fois.
+> ##### Astuce
+>
+> Avec `dpkg -i`, les dépendances ne sont pas installées et il faut ensuite lancer
+> `sudo apt --fix-broken install`. `apt install ./fichier.deb` fait tout en une seule fois.
+{: .block-tip }
 
 ### WaveForms
 

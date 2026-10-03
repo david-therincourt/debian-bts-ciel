@@ -2,17 +2,7 @@
 title: Python
 nav_order: 10
 permalink: /python/
----
-
-# Python
-{: .no_toc }
-
-## Sommaire
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
+layout: post
 ---
 
 Python 3 est installé par défaut sur Debian 13. Tous les outils ci-dessous
@@ -24,13 +14,17 @@ s'installent depuis les dépôts Debian avec `apt`.
 sudo apt install python3-pip python3-venv python-is-python3
 ```
 
-{: .note }
-Debian ne fournit que la commande `python3`. Le paquet `python-is-python3` ajoute
-la commande `python`, que les étudiants tapent souvent par habitude (Windows, tutoriels).
+> ##### Remarque
+>
+> Debian ne fournit que la commande `python3`. Le paquet `python-is-python3` ajoute
+> la commande `python`, que les étudiants tapent souvent par habitude (Windows, tutoriels).
+{: .block-tip }
 
-{: .important }
-Sur Debian 13, `pip install` est **refusé en dehors d'un environnement virtuel**
-(erreur `externally-managed-environment`) afin de ne pas casser les paquets Python du système.
+> ##### Important
+>
+> Sur Debian 13, `pip install` est **refusé en dehors d'un environnement virtuel**
+> (erreur `externally-managed-environment`) afin de ne pas casser les paquets Python du système.
+{: .block-danger }
 
 Deux façons d'installer une bibliothèque :
 
@@ -49,7 +43,8 @@ Deux façons d'installer une bibliothèque :
    deactivate                      # quitter l'environnement
    ```
 
-{: .note }
+> ##### Remarque
+>
 > Un **environnement virtuel** est un dossier qui contient sa propre copie de Python et ses propres
 > bibliothèques, isolées de celles du système. Les paquets installés avec `pip` dans cet environnement
 > ne modifient pas le Python de Debian et n'entrent pas en conflit avec les paquets installés par `apt`.
@@ -60,11 +55,14 @@ Deux façons d'installer une bibliothèque :
 > Une fois l'environnement **activé**, son nom s'affiche au début de l'invite du terminal, par exemple
 > `(venv) david@poste:~$`. Les commandes `python` et `pip` utilisent alors cet environnement
 > jusqu'à ce qu'on le quitte avec `deactivate`.
+{: .block-tip }
 
-{: .tip }
-Avec l'option `--system-site-packages` (`python3 -m venv --system-site-packages ~/venv`),
-l'environnement voit aussi les bibliothèques installées avec `apt` (NumPy, Matplotlib…) :
-pas besoin de les réinstaller avec `pip`.
+> ##### Astuce
+>
+> Avec l'option `--system-site-packages` (`python3 -m venv --system-site-packages ~/venv`),
+> l'environnement voit aussi les bibliothèques installées avec `apt` (NumPy, Matplotlib…) :
+> pas besoin de les réinstaller avec `pip`.
+{: .block-tip }
 
 ## Thonny
 
@@ -76,9 +74,11 @@ Il permet aussi de programmer les cartes **MicroPython** (ESP32, Raspberry Pi Pi
 sudo apt install thonny
 ```
 
-{: .note }
-Pour programmer une carte branchée en USB, l'utilisateur doit appartenir au groupe `dialout`
-(voir [Accès aux ports série]({{ '/vscode/#accès-aux-ports-série-esp32-arduino' | relative_url }})).
+> ##### Remarque
+>
+> Pour programmer une carte branchée en USB, l'utilisateur doit appartenir au groupe `dialout`
+> (voir [Accès aux ports série]({{ '/vscode/#accès-aux-ports-série-esp32-arduino' | relative_url }})).
+{: .block-tip }
 
 ## Spyder
 
@@ -119,6 +119,8 @@ Lancement depuis le dossier de travail :
 jupyter lab
 ```
 
-{: .tip }
-Jupyter s'ouvre dans le navigateur. Pour l'arrêter, revenez dans le terminal
-et appuyez sur <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+> ##### Astuce
+>
+> Jupyter s'ouvre dans le navigateur. Pour l'arrêter, revenez dans le terminal
+> et appuyez sur <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+{: .block-tip }
